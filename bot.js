@@ -196,7 +196,7 @@ client.on('message', message => {
                m.delete()
            }, 5000)
              setTimeout(function() {
-               message.channel.send('[user] تم تهكير جهازك راقب ماذا سيحدث تاليا  ')
+               message.channel.send(' تم تهكير جهازك راقب ماذا سيحدث تاليا  ')
            }, 6000)
            });
          }
@@ -205,7 +205,7 @@ client.on('message', message => {
  
  
   client.on('message', async message => {
-  if(message.content.startsWith(prefix + "apply")) {
+  if(message.content.startsWith(prefix + "تقديم")) {
     await message.channel.send("**الاسم**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
