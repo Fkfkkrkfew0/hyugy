@@ -196,7 +196,7 @@ client.on('message', message => {
                m.delete()
            }, 5000)
              setTimeout(function() {
-               message.channel.send('تم تهكير جهازك راقب ماذا سيحدث تاليا [user] ')
+               message.channel.send('[user] تم تهكير جهازك راقب ماذا سيحدث تاليا  ')
            }, 6000)
            });
          }
