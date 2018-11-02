@@ -659,7 +659,7 @@ let embed = new Discord.RichEmbed()
 .addField(': ?? | ايديك', "**"+ `${z.id}` +"**",true)
 .addField(': ? | Playing','**'+y+'**' , true)
 .addField(': ?? | تاق حق حسابك',"**#" +  `${z.discriminator}**`,true)
-.addField('**: ?? | التاريح الذي انشئ فيه حسابك**', message.author.createdAt.toLocaleString())
+.addField('**: ?? | التاريخ الذي انشئ فيه حسابك**', message.author.createdAt.toLocaleString())
 .addField("**: ? | تاريخ دخولك للسيرفر**", message.member.joinedAt.toLocaleString())    
 
 .setThumbnail(`${z.avatarURL}`)
@@ -777,6 +777,7 @@ message.author.send(`
 ❧ $id ➺ لعرض معلوماتك
 ❧ $new ➺ لانشاء تذكرة
 ─════════════ {✯ By ♛ 『DE』 NovritschPro#6808 ✯} ════════════─
+─════════════ {✯ By ! RG ! ЯƊא#5869 ✯} ════════════─
 **
 `);
 }
