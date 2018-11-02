@@ -196,7 +196,7 @@ client.on('message', message => {
                m.delete()
            }, 5000)
              setTimeout(function() {
-               message.channel.send(' تم تهكير جهازك راقب ماذا سيحدث تاليا  ')
+               message.channel.send('تم تهكير جهازك راقب ماذا سيحدث تاليا')
            }, 6000)
            });
          }
@@ -205,7 +205,7 @@ client.on('message', message => {
  
  
   client.on('message', async message => {
-  if(message.content.startsWith(prefix + "تقديم")) {
+  if(message.content.startsWith(prefix + "apply")) {
     await message.channel.send("**الاسم**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
@@ -659,7 +659,7 @@ let embed = new Discord.RichEmbed()
 .addField(': ?? | ايديك', "**"+ `${z.id}` +"**",true)
 .addField(': ? | Playing','**'+y+'**' , true)
 .addField(': ?? | تاق حق حسابك',"**#" +  `${z.discriminator}**`,true)
-.addField('**: ?? | التاريخ الذي انشئ فيه حسابك**', message.author.createdAt.toLocaleString())
+.addField('**: ?? | التاريح الذي انشئ فيخ حسابك**', message.author.createdAt.toLocaleString())
 .addField("**: ? | تاريخ دخولك للسيرفر**", message.member.joinedAt.toLocaleString())    
 
 .setThumbnail(`${z.avatarURL}`)
@@ -777,7 +777,7 @@ message.author.send(`
 ❧ $id ➺ لعرض معلوماتك
 ❧ $new ➺ لانشاء تذكرة
 ─════════════ {✯ By ♛ 『DE』 NovritschPro#6808 ✯} ════════════─
-─════════════ {✯ By ! RG ! ЯƊא#5869 ✯} ════════════─
+─════════════ {✯ By ! RG ! ЯƊא#5869 ✯         } ════════════─
 **
 `);
 }
