@@ -783,4 +783,35 @@ message.author.send(`
 }
 })
  
+
+
+
+
+
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
+:crown:اسم العضو  ${member}:crown:  
+انت العضو رقم ${member.guild.memberCount} `) 
+}).catch(console.error)
+})
+
+
+
+
+client.on('message', function(message) {
+    if (message.channel.type === "dm") {
+        if (message.author.id === client.user.id) return;
+        var stewart = new Discord.RichEmbed()
+            .setColor('RANDOM')
+            .setTimestamp()
+            .setTitle('رساله جديده في خاص البوت')
+            .setThumbnail(${message.author.avatarURL})
+            .setDescription(\n\n\``${message.content}```)
+            .setFooter(من (@${message.author.tag})  |  (${message.author.id})`)
+        client.channels.get("506778257308385290").send({ embed: stewart });
+    }
+});
+
+
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
