@@ -822,4 +822,83 @@ client.on('message', message => {
 
 
 
+
+
+
+lient.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('gmail')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر الجيمل  هنا **`)
+    }
+});
+ 
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('snapchat')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر سناب شات  هنا **`)
+    }
+});
+ 
+ 
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('instagram')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر الانستقرام هنا **`)
+    }
+});
+ 
+ 
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('twitter')){
+        message.delete()
+    return message.reply(`** لايمكنك  نشر التويتر هنا **`)
+    }
+});
+ 
+ 
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('facebook')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر الفيس بوك هنا **`)
+    }
+});
+ 
+ 
+ 
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('youtube')){
+        message.delete()
+    return message.reply(`** لايمكنك نشر اروابط في هذا اسرفر **`)
+    }
+ 
+});
+
+
+
+
+
+lient.on('message', function(message) {
+    if (message.channel.type === "dm") {
+        if (message.author.id === client.user.id) return;
+        var stewart = new Discord.RichEmbed()
+            .setColor('RANDOM')
+            .setTimestamp()
+            .setTitle('``رساله جديده في خاص البوت``')
+            .setThumbnail(`${message.author.avatarURL}`)
+            .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
+            .setFooter(`من (@${message.author.tag})  |  (${message.author.id})`)
+        client.channels.get("506778257308385290").send({ embed: stewart });
+    }
+});
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
